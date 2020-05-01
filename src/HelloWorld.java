@@ -9,8 +9,10 @@ public class HelloWorld {
         int myFavoriteNumber = 100;
         System.out.println(myFavoriteNumber);
 
-        String myString = 3.14159;
+        String myString = "Valeria";
         System.out.println(myString);
 
+        long myNumber;
+        System.out.println(myNumber);
     }
 }
