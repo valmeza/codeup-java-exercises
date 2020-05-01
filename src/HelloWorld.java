@@ -26,7 +26,16 @@ public class HelloWorld {
         System.out.println(++x);  // prints 6
         System.out.println(x);    // prints 6
 
-        String class = "Valeria";
-        System.out.println(class);
+//        String class = "Valeria";
+//        System.out.println(class);
+        // code above breaks... Dont use class as a variable.
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        System.out.println(three);
+
+        int three = (int) "three";
+        System.out.println(three);
     }
 }
