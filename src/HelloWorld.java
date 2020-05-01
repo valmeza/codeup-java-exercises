@@ -12,7 +12,7 @@ public class HelloWorld {
         String myString = "Valeria";
         System.out.println(myString);
 
-        long myNumber;
+        long myNumber = 3.14;
         System.out.println(myNumber);
     }
 }
