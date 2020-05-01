@@ -22,9 +22,9 @@ public class HelloWorld {
 //        System.out.println(x++); // prints 5
 //        System.out.println(x);   // prints 6
 
-        int x = 5;
-        System.out.println(++x);  // prints 6
-        System.out.println(x);    // prints 6
+//        int x = 5;
+//        System.out.println(++x);  // prints 6
+//        System.out.println(x);    // prints 6
 
 //        String class = "Valeria";
 //        System.out.println(class);
@@ -35,7 +35,11 @@ public class HelloWorld {
 //        int three = (int) o;
 //        System.out.println(three);
 
-        int three = (int) "three";
-        System.out.println(three);
+//        int three = (int) "three";
+//        System.out.println(three);
+
+        int x = 4;
+        x += 5;
+        System.out.println(x);
     }
 }
