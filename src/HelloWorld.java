@@ -9,5 +9,8 @@ public class HelloWorld {
         int myFavoriteNumber = 100;
         System.out.println(myFavoriteNumber);
 
+        String myString = "Valeria";
+        System.out.println(myString);
+
     }
 }
