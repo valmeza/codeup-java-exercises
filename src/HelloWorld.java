@@ -38,8 +38,13 @@ public class HelloWorld {
 //        int three = (int) "three";
 //        System.out.println(three);
 
-        int x = 4;
-        x += 5;
+//        int x = 4;
+//        x += 5;
+//        System.out.println(x);
+
+        int x = 3;
+        int y = 4;
+        x *= y;
         System.out.println(x);
     }
 }
