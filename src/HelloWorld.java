@@ -42,9 +42,16 @@ public class HelloWorld {
 //        x += 5;
 //        System.out.println(x);
 
-        int x = 3;
-        int y = 4;
-        x *= y;
+//        int x = 3;
+//        int y = 4;
+//        x *= y;
+//        System.out.println(x);
+
+        int x = 10;
+        int y = 2;
+        x /= y;
+        y -= x;
         System.out.println(x);
+        System.out.println(y);
     }
 }
