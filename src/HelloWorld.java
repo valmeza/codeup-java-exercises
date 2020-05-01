@@ -14,5 +14,16 @@ public class HelloWorld {
 
         long myNumber = 123;
         System.out.println(myNumber);
+
+// Why does assigning the value 3.14 to a variable declared as a long not compile, but assigning an integer value does?
+        // 3.14 returns as a double, and the integer is within the range of the long.
+
+        int x = 5;
+        System.out.println(x++);
+        System.out.println(x);
+
+//        int x = 5;
+//        System.out.println(++x);
+//        System.out.println(x);
     }
 }
