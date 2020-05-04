@@ -26,5 +26,23 @@ public class ControlFlowExercises {
             System.out.println("c = " + c);
             c*=c;
         } while (c < 1000000);
+
+        // c. for
+
+        for(int y = 5; y <= 15; y++) {
+            System.out.println("for loop: y = " + y);
+        }
+
+        for(int l = 0; l <= 100; l+=2) {
+            System.out.println("for loop: l = " + l);
+        }
+
+        for(int backward = 100; backward >= -10; backward-=5) {
+            System.out.println("for loop: backward = " + backward);
+        }
+
+        for(long n = 2L; n < 1000000; n*=n) {
+            System.out.println("for loop: n = " + n);
+        }
     }
 }
