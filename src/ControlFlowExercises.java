@@ -8,8 +8,8 @@ public class ControlFlowExercises {
         // a. While
         int i = 5;
         while (i <= 15) {
-//            System.out.print("While: i = " + i);
-            System.out.print(i + " ");
+            System.out.print("While: i = " + i);
+//            System.out.print(i + " "); // this is the correct format for the exercise.
             i++;
         }
         // b. Do While
