@@ -63,8 +63,33 @@ public class ControlFlowExercises {
         Scanner scanner = new Scanner(System.in);
         int inputSquared = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("Number" + "   |" + "Squared" + "   |" + "Cubed");
         for(int squared = 1; squared <= inputSquared; squared++){
-            System.out.println("Number: " + squared +" "+ "Squared: " + squared * squared + " " + "Cubed: " + squared * squared * squared);
+            System.out.println("Number: " + squared +"| "+ "Squared: " + squared * squared + "| " + "Cubed: " + squared * squared * squared);
+            System.out.println("____________________________________");
+        }
+
+        // 4. Convert given number grades into letter grades
+//        Grade Ranges:
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
+
+        System.out.println("Enter a number from 0 - 100");
+        int result = Integer.parseInt(scanner.nextLine());
+
+        if(result >= 88) {
+            System.out.println("Grade: A");
+        } else if(result >= 87) {
+            System.out.println("Grade: B");
+        } else if(result >= 79) {
+            System.out.println("Grade: C");
+        } else if(result >= 66) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
         }
     }
 }
