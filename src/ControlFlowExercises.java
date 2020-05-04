@@ -62,17 +62,41 @@ public class ControlFlowExercises {
         }
 
         // 3. Table of powers
-        System.out.println("What number would you like to go up to?");
+//        System.out.println("What number would you like to go up to?");
         Scanner scanner = new Scanner(System.in);
-        int inputSquared = Integer.parseInt(scanner.nextLine());
+//        int inputSquared = Integer.parseInt(scanner.nextLine());
+//
+//        System.out.println("Number" + "   |" + "Squared" + "   |" + "Cubed");
+//        for (int squared = 1; squared <= inputSquared; squared++) {
+//            System.out.println("Number: " + squared + "| " + "Squared: " + squared * squared + "| " + "Cubed: " + squared * squared * squared);
+//            System.out.println("____________________________________");
+//        }
 
-        System.out.println("Number" + "   |" + "Squared" + "   |" + "Cubed");
-        for (int squared = 1; squared <= inputSquared; squared++) {
-            System.out.println("Number: " + squared + "| " + "Squared: " + squared * squared + "| " + "Cubed: " + squared * squared * squared);
-            System.out.println("____________________________________");
-        }
+        boolean userContinue = true;
+        do {
+            System.out.println("What number would you like to go up to?");
+            int user = scanner.nextInt();
+            System.out.println();
+            System.out.println("Here is your table");
+            System.out.println();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for(int input = 1; input <= user; input++) {
+                System.out.format("%-6d", input);
+                System.out.print(" | ");
+                System.out.format("%-7d",input * input);
+                System.out.print(" | ");
+                System.out.print(input * input * input);
+                System.out.println();
+            }
+            System.out.println("Would you like to enter another number? [y/n]");
+            String userResponse = scanner.next();
+            if(!userResponse.equalsIgnoreCase("y")) {
+                userContinue = false;
+            }
+        } while (userContinue);
 
-        // 4. Convert given number grades into letter grades
+//        4. Convert given number grades into letter grades
 //        Grade Ranges:
 //        A : 100 - 88
 //        B : 87 - 80
