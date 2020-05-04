@@ -8,7 +8,7 @@ public class ControlFlowExercises {
         // a. While
         int i = 5;
         while (i <= 15) {
-            System.out.print("While: i = " + i);
+            System.out.println("While: i = " + i);
 //            System.out.print(i + " "); // this is the correct format for the exercise.
             i++;
         }
@@ -50,7 +50,7 @@ public class ControlFlowExercises {
 
         // 2. FizzBuzz
         for (int fizzbuzz = 1; fizzbuzz <= 100; fizzbuzz++) {
-            if (fizzbuzz % 3 == 0 && fizzbuzz % 5 == 0) {
+            if (fizzbuzz % 15 == 0) {
                 System.out.println("FizzBuzz");
             } else if (fizzbuzz % 3 == 0) {
                 System.out.println("Fizz");
