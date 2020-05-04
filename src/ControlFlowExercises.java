@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main (String[] args) {
-        // Loop Basics
+        // 1. Loop Basics
         // a. While
         int i = 5;
         while(i <= 15) {
@@ -8,7 +10,6 @@ public class ControlFlowExercises {
             i++;
         }
         // b. Do While
-
         int a = 0;
         do {
             System.out.println("Do while: a = " + a);
@@ -28,7 +29,6 @@ public class ControlFlowExercises {
         } while (c < 1000000);
 
         // c. for
-
         for(int y = 5; y <= 15; y++) {
             System.out.println("for loop: y = " + y);
         }
@@ -45,8 +45,7 @@ public class ControlFlowExercises {
             System.out.println("for loop: n = " + n);
         }
 
-        // FizzBuzz
-
+        // 2. FizzBuzz
         for(int fizzbuzz = 1; fizzbuzz <= 100; fizzbuzz++) {
             if(fizzbuzz % 3 == 0 && fizzbuzz % 5 == 0) {
                 System.out.println("FizzBuzz");
@@ -57,6 +56,15 @@ public class ControlFlowExercises {
             } else {
                 System.out.println(fizzbuzz);
             }
+        }
+
+        // 3. Table of powers
+        System.out.println("What number would you like to go up to?");
+        Scanner scanner = new Scanner(System.in);
+        int inputSquared = Integer.parseInt(scanner.nextLine());
+
+        for(int squared = 1; squared <= inputSquared; squared++){
+            System.out.println("Number: " + squared +" "+ "Squared: " + squared * squared + " " + "Cubed: " + squared * squared * squared);
         }
     }
 }
