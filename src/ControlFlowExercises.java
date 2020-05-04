@@ -44,5 +44,19 @@ public class ControlFlowExercises {
         for(long n = 2L; n < 1000000; n*=n) {
             System.out.println("for loop: n = " + n);
         }
+
+        // FizzBuzz
+
+        for(int fizzbuzz = 1; fizzbuzz <= 100; fizzbuzz++) {
+            if(fizzbuzz % 3 == 0 && fizzbuzz % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (fizzbuzz % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (fizzbuzz % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(fizzbuzz);
+            }
+        }
     }
 }
