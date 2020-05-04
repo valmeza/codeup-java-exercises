@@ -8,7 +8,8 @@ public class ControlFlowExercises {
         // a. While
         int i = 5;
         while (i <= 15) {
-            System.out.println("While: i = " + i);
+//            System.out.print("While: i = " + i);
+            System.out.print(i + " ");
             i++;
         }
         // b. Do While
