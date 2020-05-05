@@ -15,7 +15,7 @@ public class bob {
         String userResponse = "";
         do {
             System.out.println("Ask Bob something.");
-            String askBobSomething = input.nextLine();
+            String askBobSomething = input.nextLine().trim();
             if(askBobSomething.endsWith("?")) {
                 System.out.println("Sure.");
             } else if(askBobSomething.endsWith("!")) {
