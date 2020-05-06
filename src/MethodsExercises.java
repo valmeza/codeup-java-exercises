@@ -61,17 +61,26 @@ public class MethodsExercises {
     // 3. Calculate the factorial of a number.
 
     public static void factorialTable(Scanner number) {
-        System.out.println("Pick a number between 1 - 10: ");
-        long userInput = number.nextInt();
-        long result = 1;
-        if( userInput <= 10 && userInput != 0) {
-            for (long i = 1; i <= userInput; i++) {
-                result *= i;
-                System.out.printf("%d!" + " = " + "%d%n", i, result);
+        do {
+            System.out.println("Pick a number between 1 - 10: ");
+            long userInput = Long.parseLong(number.nextLine());
+            long result = 1;
+
+            if (userInput <= 10 && userInput != 0) {
+                for (long i = 1; i <= userInput; i++) {
+                    result *= i;
+                    System.out.printf("%d!" + " = " + "%d%n", i, result);
+                }
+            } else {
+                System.out.println("Invalid number");
+                factorialTable(number);
             }
-            return;
-        }
-        System.out.println("Invalid number");
-        factorialTable(number);
+
+            System.out.println("Do you wish to continue?");
+            String response = number.nextLine();
+            if (!response.equalsIgnoreCase("y")) {
+                return;
+            }
+        } while (true);
     }
 }
