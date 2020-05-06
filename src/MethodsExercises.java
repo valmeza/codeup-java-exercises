@@ -7,6 +7,7 @@ public class MethodsExercises {
         System.out.println("Addition: " + addition(1, 1));
         System.out.println("Subtraction: " + subtraction(1, 5));
         System.out.println("Multiplication: " + multiplication(5, 5));
+        System.out.println("Multiplication Loop: " + multiplicationLoop(5, 5));
         System.out.println("Division: " + division(0, 1));
         System.out.println("Modulus: " + modulus(5, 2));
     }
@@ -19,17 +20,17 @@ public class MethodsExercises {
         return num1 - num2;
     }
 
-//    version 1 of the multiplication method
-//    public static int multiplication(int num1, int num2) {
-//        return num1 * num2;
-//    }
+    //version 1 of the multiplication method
+    public static int multiplication(int num1, int num2) {
+        return num1 * num2;
+    }
 
     // Bonus: version 2 of the multiplication method using a loop
-    public static int multiplication(int num1, int num2) {
-        int result = 0;
+    public static int multiplicationLoop(int num1, int num2) {
+        int result = 0; // initialize
         while (num1 > 0) {
-            result += num2;
-            num1--;
+            result += num2; // adding the initial value 0 + the num2
+            num1--; // decrementing this until its equal to 0
         }
         return result;
     }
