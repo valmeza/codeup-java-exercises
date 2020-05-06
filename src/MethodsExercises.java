@@ -6,6 +6,7 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
 //        getInteger(0, 0);
 //        getInteger(input);
+        highLow(input);
         factorialTable(input);
         dice(input);
 //        System.out.println("Addition: " + addition(1, 1));
@@ -113,6 +114,26 @@ public class MethodsExercises {
 
             if (!rollAgain.equalsIgnoreCase("y")) {
                 return;
+            }
+        }
+    }
+
+    // 5. Game Development 101
+    public static void highLow(Scanner guess) {
+        int range = 100 - 1 + 1;
+        int numberToGuess = ((int)(Math.random()* range) + 1);
+
+        while (true) {
+            System.out.println("Guess the number: ");
+            int userInput = Integer.parseInt(guess.nextLine());
+
+            if (userInput > numberToGuess) {
+                System.out.println("Lower");
+            } else if (userInput < numberToGuess) {
+                System.out.println("Higher");
+            } else {
+                System.out.println("You Win!!!");
+                break;
             }
         }
     }
