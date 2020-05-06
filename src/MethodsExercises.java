@@ -1,10 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-        //Main
-//        getInteger(0, 0);
         Scanner input = new Scanner(System.in);
+//        getInteger(0, 0);
 //        getInteger(input);
         factorialTable(input);
         dice(input);
