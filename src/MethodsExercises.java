@@ -95,7 +95,7 @@ public class MethodsExercises {
     // 4. Create an application that simulates dice rolling
     public static void dice(Scanner dice) {
         while (true) {
-            System.out.println("Enter a number of Sides for a pair of dice: ");
+            System.out.println("Give me a number of sides: ");
             double userInput = Integer.parseInt(dice.nextLine());
 
             System.out.println("Roll the dice? [roll/no]");
