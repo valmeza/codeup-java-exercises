@@ -64,9 +64,14 @@ public class MethodsExercises {
         System.out.println("Pick a number between 1 - 10: ");
         long userInput = number.nextInt();
         long result = 1;
-        for(long i = 1; i <= userInput; i++) {
-            result*=i;
-            System.out.printf("%d!"+ " = " +"%d%n", i ,result);
+        if( userInput <= 10 && userInput != 0) {
+            for (long i = 1; i <= userInput; i++) {
+                result *= i;
+                System.out.printf("%d!" + " = " + "%d%n", i, result);
+            }
+            return;
         }
+        System.out.println("Invalid number");
+        factorialTable(number);
     }
 }
