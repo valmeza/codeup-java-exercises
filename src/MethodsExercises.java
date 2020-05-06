@@ -45,15 +45,14 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
-    public static int getInteger(Scanner number) {
+    public static void getInteger(Scanner number) {
         System.out.println("Pick a number between 1 - 10: ");
         int userInput = number.nextInt();
-        if(userInput <= 10) {
+        if (userInput <= 10 && userInput != 0) {
             System.out.println("Your number is in range: " + userInput);
-            return userInput;
+            return;
         }
         System.out.println("Invalid Number!");
         getInteger(number);
-        return userInput;
     }
 }
