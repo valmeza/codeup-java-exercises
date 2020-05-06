@@ -98,17 +98,20 @@ public class MethodsExercises {
             System.out.println("Enter a number of Sides for a pair of dice: ");
             double userInput = Integer.parseInt(dice.nextLine());
 
-            System.out.println("Roll the dice [roll/no]");
+            System.out.println("Roll the dice? [roll/no]");
             String response = dice.nextLine();
 
             double dice1 = Math.floor((Math.random() * userInput) + 1);
             double dice2 = Math.floor((Math.random() * userInput) + 1);
+
             if (response.equalsIgnoreCase("roll")) {
                 System.out.println("Diced rolled \n" + "Dice 1: " + dice1 + "\n" + "Dice 2: " + dice2);
             }
+
             System.out.println("Would you like to roll again? [y/n]");
             String rollAgain = dice.nextLine();
-            if(!rollAgain.equalsIgnoreCase("y")) {
+
+            if (!rollAgain.equalsIgnoreCase("y")) {
                 return;
             }
         }
