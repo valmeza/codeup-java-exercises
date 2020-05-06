@@ -4,6 +4,8 @@ public class MethodsExercises {
     public static void main(String[] args) {
         //Main
 //        getInteger(0, 0);
+        Scanner input = new Scanner(System.in);
+        getInteger(input);
         System.out.println("Addition: " + addition(1, 1));
         System.out.println("Subtraction: " + subtraction(1, 5));
         System.out.println("Multiplication: " + multiplication(5, 5));
@@ -43,9 +45,15 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
-//    public static int getInteger(int min, int max) {
-//        System.out.println("Enter a number between 1 - 10: ");
-//        int userInput = getInteger(1, 10);
-//        return 0;
-//    }
+    public static int getInteger(Scanner number) {
+        System.out.println("Pick a number between 1 - 10: ");
+        int userInput = number.nextInt();
+        if(userInput <= 10) {
+            System.out.println("Your number is in range: " + userInput);
+            return userInput;
+        }
+        System.out.println("Invalid Number!");
+        getInteger(number);
+        return userInput;
+    }
 }
