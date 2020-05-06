@@ -7,11 +7,12 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
 //        getInteger(input);
         factorialTable(input);
+        dice(input);
 //        System.out.println("Addition: " + addition(1, 1));
 //        System.out.println("Subtraction: " + subtraction(1, 5));
 //        System.out.println("Multiplication: " + multiplication(5, 5));
 //        System.out.println("Multiplication Loop: " + multiplicationLoop(5, 5));
-//        System.out.println("Division: " + division(0, 1));
+//        System.out.println("Division: " + division(0, 0));
 //        System.out.println("Modulus: " + modulus(5, 2));
     }
 
@@ -39,6 +40,12 @@ public class MethodsExercises {
     }
 
     public static int division(int num1, int num2) {
+        // bonus:
+        // how to prevent a user from dividing zero
+        if (num2 == 0) {
+            System.out.println("Division by zero is impossible");
+            return 0;
+        }
         return num1 / num2;
     }
 
@@ -47,19 +54,20 @@ public class MethodsExercises {
     }
 
     // 2. Create a method that validates that user input is in a certain range
-    public static void getInteger(Scanner number) {
+    public static int getInteger(Scanner number) {
         System.out.println("Pick a number between 1 - 10: ");
         int userInput = number.nextInt();
         if (userInput <= 10 && userInput != 0) {
             System.out.println("Your number is in range: " + userInput);
-            return;
+            return getInteger(number);
+        } else {
+            System.out.println("Invalid Number!");
+            getInteger(number);
         }
-        System.out.println("Invalid Number!");
-        getInteger(number);
+        return userInput;
     }
 
     // 3. Calculate the factorial of a number.
-
     public static void factorialTable(Scanner number) {
         do {
             System.out.println("Pick a number between 1 - 10: ");
@@ -82,5 +90,27 @@ public class MethodsExercises {
                 return;
             }
         } while (true);
+    }
+
+    // 4. Create an application that simulates dice rolling
+    public static void dice(Scanner dice) {
+        while (true) {
+            System.out.println("Enter a number of Sides for a pair of dice: ");
+            double userInput = Integer.parseInt(dice.nextLine());
+
+            System.out.println("Roll the dice [roll/no]");
+            String response = dice.nextLine();
+
+            double dice1 = Math.floor((Math.random() * userInput) + 1);
+            double dice2 = Math.floor((Math.random() * userInput) + 1);
+            if (response.equalsIgnoreCase("roll")) {
+                System.out.println("Diced rolled \n" + "Dice 1: " + dice1 + "\n" + "Dice 2: " + dice2);
+            }
+            System.out.println("Would you like to roll again? [y/n]");
+            String rollAgain = dice.nextLine();
+            if(!rollAgain.equalsIgnoreCase("y")) {
+                return;
+            }
+        }
     }
 }
