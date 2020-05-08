@@ -4,19 +4,16 @@ public class Circle {
     private double radius;
     private double pi = Math.PI;
 
-    public void Circle (double radius) {
-        System.out.println("Enter a radius: ");
+    // There's no circle without a radius
+    public Circle (double radius) {
         this.radius = radius;
-        System.out.println("Radius: " + radius);
     }
 
-    public void getArea() {
-        System.out.print("Area: ");
-        System.out.println(pi * (this.radius * this.radius));
+    public double getArea() {
+        return pi * (Math.pow(this.radius, 2));
     }
 
-    public void getCircumference() {
-        System.out.print("Circumference: ");
-        System.out.println(2 * pi * this.radius);
+    public double getCircumference() {
+        return 2 * pi * this.radius;
     }
 }

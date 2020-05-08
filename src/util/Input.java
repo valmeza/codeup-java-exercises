@@ -1,53 +1,48 @@
 package util;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("String: ");
+        System.out.println("Enter Something: ");
         return scanner.nextLine();
     }
 
-    public void yesNo() {
+    public boolean yesNo() {
         System.out.println("Yes or No?");
-        String response = scanner.nextLine();
-        System.out.println(response.equalsIgnoreCase("Y"));
+        return scanner.nextLine().equalsIgnoreCase("y");
     }
 
-    public void getInt(int min, int max) {
-        System.out.println("Enter a number between 1-10");
-        int number = scanner.nextInt();
-        if (number >= min && number <= max) {
-            System.out.println("Valid Number: " + number);
-        } else {
-            System.out.println("Invalid Number!");
-            getInt(min, max);
+    public int getInt(int min, int max) {
+        System.out.println("Enter a number between " + min + " " + max);
+        int number = Integer.parseInt(scanner.nextLine());
+        if (number < min || number > max) {
+            System.out.println("Out of range!");
+            return getInt(min, max);
         }
+        return number;
     }
 
-    public void getInt() {
+    public int getInt() {
         System.out.println("Enter a number: ");
-        int number = scanner.nextInt();
-        System.out.println("Number: " + number);
+        return Integer.parseInt(scanner.nextLine());
     }
 
-    public void getDouble(double min, double max) {
-        System.out.println("Enter a double: ");
-        double number = scanner.nextDouble();
-        if(number >= min && number <= max) {
-            System.out.println("Valid number: " + number);
-        } else {
-            System.out.println("Invalid Number!");
-            getDouble(min, max);
+    public double getDouble(double min, double max) {
+        System.out.println("Enter a decimal between " + min + " " + max);
+        double number = Double.parseDouble(scanner.nextLine());
+        if (number < min || number > max) {
+            System.out.println("Out of range!");
+            return getDouble(min, max);
         }
+        return number;
     }
 
-    public int getDouble() {
-        System.out.println("Enter a double: ");
-        double number = scanner.nextDouble();
-        System.out.println("Double: " + number);
-        return 0;
+    public double getDouble() {
+        System.out.println("Enter a decimal: ");
+        return Double.parseDouble(scanner.nextLine());
     }
 }
