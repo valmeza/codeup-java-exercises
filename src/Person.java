@@ -1,4 +1,14 @@
 public class Person {
+
+//    public Person(String john) {
+//    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        person1.setName("Val");
+        person1.sayHello();
+    }
+
     private String name;
 
     public String getName() {
@@ -10,14 +20,7 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println("Hello! " + this.name + "!");
-    }
-
-    public static void main(String[] args){
-        Person person1 = new Person();
-        person1.setName("Val");
-        System.out.println(person1.getName());
-        person1.sayHello();
+        System.out.println("Hello " + this.name + "!");
     }
 
 }
