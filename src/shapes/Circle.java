@@ -1,10 +1,13 @@
 package shapes;
 
 public class Circle {
+    //properties
     private double radius;
     static private int count = 0; // Bonus: Created property set it to static private so no one changes the value
     private double pi = Math.PI;
 
+    // constructors
+    
     // There's no circle without a radius
     public Circle (double radius) {
         this.radius = radius;
