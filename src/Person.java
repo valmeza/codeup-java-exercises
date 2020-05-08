@@ -12,7 +12,7 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
-    } // setter : void we are not returning we are setting something.
+    } // setter : most likely always void we are not returning we are setting a value something.
 
     public void sayHello() {
         System.out.println("Hello " + getName() + "!");

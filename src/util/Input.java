@@ -3,12 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
-    public void getString() {
+    public String getString() {
         System.out.println("String: ");
-        String input = scanner.nextLine();
-        System.out.println(input);
+        return scanner.nextLine();
     }
 
     public void yesNo() {
