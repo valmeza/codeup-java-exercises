@@ -27,4 +27,27 @@ public class Input {
             getInt(min, max);
         }
     }
+
+    public void getInt() {
+        System.out.println("Enter a number: ");
+        int number = scanner.nextInt();
+        System.out.println("Number: " + number);
+    }
+
+    public void getDouble(double min, double max) {
+        System.out.println("Enter a double: ");
+        double number = scanner.nextDouble();
+        if(number >= min && number <= max) {
+            System.out.println("Valid number: " + number);
+        } else {
+            System.out.println("Invalid Number!");
+            getDouble(min, max);
+        }
+    }
+
+    public void getDouble() {
+        System.out.println("Enter a double: ");
+        double number = scanner.nextDouble();
+        System.out.println("Double: " + number);
+    }
 }

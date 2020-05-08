@@ -6,5 +6,8 @@ public class InputTest {
         response.getString();
         response.yesNo();
         response.getInt(1, 10);
+        response.getInt();
+        response.getDouble(1.0, 10.00);
+        response.getDouble();
     }
 }
