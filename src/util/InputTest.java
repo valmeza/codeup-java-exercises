@@ -5,5 +5,6 @@ public class InputTest {
         Input response = new Input();
         response.getString();
         response.yesNo();
+        response.getInt(1, 10);
     }
 }

@@ -17,4 +17,14 @@ public class Input {
         System.out.println(response.equalsIgnoreCase("Y"));
     }
 
+    public void getInt(int min, int max) {
+        System.out.println("Enter a number between 1-10");
+        int number = scanner.nextInt();
+        if (number >= min && number <= max) {
+            System.out.println("Valid Number: " + number);
+        } else {
+            System.out.println("Invalid Number!");
+            getInt(min, max);
+        }
+    }
 }
