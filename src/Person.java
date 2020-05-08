@@ -2,17 +2,17 @@ public class Person {
 
     private String name; // object
 
-    public Person(String name) { // this is a constructor
+    public Person(String name) { // constructor
         setName(name);
     }
 
     public String getName() {
         return this.name;
-    } // getter
+    } // getter normally returns something.
 
     public void setName(String name) {
         this.name = name;
-    } // setter
+    } // setter : void we are not returning we are setting something.
 
     public void sayHello() {
         System.out.println("Hello " + getName() + "!");
