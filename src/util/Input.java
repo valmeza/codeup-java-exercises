@@ -45,9 +45,10 @@ public class Input {
         }
     }
 
-    public void getDouble() {
+    public int getDouble() {
         System.out.println("Enter a double: ");
         double number = scanner.nextDouble();
         System.out.println("Double: " + number);
+        return 0;
     }
 }
