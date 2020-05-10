@@ -20,7 +20,7 @@ public class Movie {
         this.setCategory();
     }
 
-    public Movie(String citizen_kane, String drama) {
-        
+    public Movie(String title, String genre) {
+
     }
 }
