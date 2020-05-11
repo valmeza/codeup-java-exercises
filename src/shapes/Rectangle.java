@@ -5,6 +5,7 @@ public class Rectangle {
     protected int width;
 
     public Rectangle(int length, int width) { // constructor
+        // my approach
 //        System.out.println("Area: " + getArea(length, width));
 //        System.out.println("Perimeter: " + perimeter(length, width));
         this.length = length;
@@ -18,6 +19,8 @@ public class Rectangle {
     public int getPerimeter() {
         return (2 * this.length) + (2 * this.width);
     }
+
+    // my approach
 //    public int getLength() {
 //        return this.length;
 //    }
