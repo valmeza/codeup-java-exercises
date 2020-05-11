@@ -10,7 +10,7 @@ public class Movie {
     Input userInput = new Input();
 
     public Movie(String name, String category) {
-        System.out.println("Name: " + name + " " + "Genre: " + category);
+ 
     }
 
     // name getter and setter
