@@ -4,6 +4,11 @@ public class Rectangle {
     protected int length;
     protected int width;
 
+    public Rectangle(int length, int width) {
+        System.out.println(getArea(length, width));
+        System.out.println(perimeter(length, width));
+    }
+
     public int getLength() {
         return this.length;
     }
@@ -27,4 +32,5 @@ public class Rectangle {
     public static int perimeter(int length, int width) {
         return length * width;
     }
+
 }
