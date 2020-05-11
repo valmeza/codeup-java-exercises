@@ -13,6 +13,6 @@ public class ServerNameGenerator {
        int randomAdjective = random.nextInt(adjectives.length);
        int randomNoun = random.nextInt(nouns.length);
        System.out.println("Here is your server name: ");
-       System.out.println(adjectives[randomAdjective] + "-" +nouns[randomNoun]);
+       System.out.println(adjectives[randomAdjective] + "-" + nouns[randomNoun]);
    }
 }
