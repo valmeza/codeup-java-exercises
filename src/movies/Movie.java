@@ -9,13 +9,14 @@ public class Movie {
     private  String category;
     Input userInput = new Input();
 
-    public Movie(String name, String category) {
- 
+    public Movie(String name, String category) { // Constructor
+        this.name = name;
+        this.category = category;
     }
 
     // name getter and setter
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -27,7 +28,7 @@ public class Movie {
         return this.category;
     }
 
-    public void setCategory(String genre) {
-        this.category = genre;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
