@@ -35,10 +35,8 @@ public class Movie {
 //        System.out.println("4 - view movies in the horror category");
 //        System.out.println("5 - view movies in the scifi category");
 //        System.out.println();
-        int user = userInput.getInt();
-        System.out.println("Enter your choice: " + user);
-        if(user == 1) {
-
-        }
+//        int user = userInput.getInt();
+//        System.out.println("Enter your choice: " + user);
+        System.out.println("Name: " + name + " " + "Genre: " + category);
     }
 }
