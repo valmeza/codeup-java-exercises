@@ -24,7 +24,9 @@ public class MoviesApplication {
                 break;
             case 1: // view all movies
                 System.out.println("\n");
-                viewMoviesByCategory("");
+                for(Movie movie: MoviesArray.findAll()) {
+                    System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
+                }
                 System.out.println("\n");
                 break;
             case 2: // view all movies
@@ -52,15 +54,9 @@ public class MoviesApplication {
         return continueRunningApp;
     }
 
-    private static int returnResponse() {
-        Input input = new Input();
-        int response = input.getInt(0, 5);
-        return returnResponse();
-    }
-
     private static void viewMoviesByCategory(String category) {
         for(Movie movie : MoviesArray.findAll()) {
-            if(movie.getCategory().equalsIgnoreCase("category")) {
+            if(movie.getCategory().equalsIgnoreCase(category)) {
                 // display the movie
                 System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
             }
@@ -68,15 +64,19 @@ public class MoviesApplication {
     }
 
     private static String returnMenuDisplay() { // creating a menu method to keep main clean
-        String choices =
-                "What would you like to do? What would you like to do?\n" +
-                        "\n" +
-                        "0 - exit\n" +
-                        "1 - view all movies\n" +
-                        "2 - view movies in the animated category\n" +
-                        "3 - view movies in the drama category\n" +
-                        "4 - view movies in the horror category\n" +
-                        "5 - view movies in the scifi category\n";
-        return choices;
+        return "What would you like to do? What would you like to do?\n" +
+                "\n" +
+                "0 - exit\n" +
+                "1 - view all movies\n" +
+                "2 - view movies in the animated category\n" +
+                "3 - view movies in the drama category\n" +
+                "4 - view movies in the horror category\n" +
+                "5 - view movies in the scifi category\n";
+    }
+
+    private static int returnResponse() {
+        Input input = new Input();
+        System.out.println("Enter your choice: ");
+        return input.getInt(0, 5);
     }
 }
