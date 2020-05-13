@@ -8,9 +8,10 @@ public class Student {
 
     public static void main(String[] args) {
         Student valeria = new Student("Valeria");
+
         valeria.addGrade(100);
-        System.out.println("valeria.getGradeAverage() = " + valeria.getGradeAverage());
         System.out.println("valeria.getName() = " + valeria.getName());
+        System.out.println("valeria.getGradeAverage = " + valeria.getGradeAverage());
     }
 
     public Student(String name) {
