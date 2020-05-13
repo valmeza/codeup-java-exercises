@@ -6,6 +6,13 @@ public class Student {
     private String name;
     private ArrayList<Integer> grades;
 
+    public static void main(String[] args) {
+        Student valeria = new Student("Valeria");
+        valeria.addGrade(100);
+        System.out.println("valeria.getGradeAverage() = " + valeria.getGradeAverage());
+        System.out.println("valeria.getName() = " + valeria.getName());
+    }
+
     public Student(String name) {
         this.name = name;
         this.grades = new ArrayList<>();
@@ -21,8 +28,8 @@ public class Student {
 
     public double getGradeAverage() {
         double sum = 0;
-        for(int i = 0; i<this.grades.size(); i++) {
-            sum += i;
+        for (Integer average : this.grades) {
+            sum += average;
         }
         return sum / this.grades.size();
     }
