@@ -2,10 +2,8 @@ package shapes;
 
 public class Square extends Quadrilateral {
 
-    public Square(double length, double width) {
-        super(length, width);
-        this.length = length;
-        this.width = width;
+    public Square(double side) {
+        super(side, side);
     }
 
     public double shape() {
