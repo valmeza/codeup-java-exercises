@@ -3,27 +3,39 @@ package grades;
 import java.util.HashMap;
 
 public class GradesApplication {
+
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
 
-        Student student1 = new Student("Valeria");
-        student1.addGrade(100);
-        student1.addGrade(83);
-        student1.addGrade(90);
+        Student trex = new Student("John");
+        trex.addGrade(100);
+        trex.addGrade(83);
+        trex.addGrade(90);
 
-        Student student2 = new Student ("Leo");
-        student2.addGrade(40);
-        student2.addGrade(50);
-        student2.addGrade(4);
+        Student lukeSkywalker = new Student ("luke");
+        lukeSkywalker.addGrade(40);
+        lukeSkywalker.addGrade(50);
+        lukeSkywalker.addGrade(4);
 
-        Student student3 = new Student("Gina");
-        student3.addGrade(90);
-        student3.addGrade(87);
-        student3.addGrade(79);
+        Student barbie = new Student("maria");
+        barbie.addGrade(90);
+        barbie.addGrade(87);
+        barbie.addGrade(79);
 
-        Student student4 = new Student("Random");
-        student4.addGrade(9);
-        student4.addGrade(43);
-        student4.addGrade(3);
+        Student mrCool123 = new Student("kyle");
+        mrCool123.addGrade(9);
+        mrCool123.addGrade(43);
+        mrCool123.addGrade(3);
+
+        students.put("Github: " + trex.getName(), trex);
+        students.put("Github: " + lukeSkywalker.getName(), lukeSkywalker);
+        students.put("Github: " + barbie.getName(), barbie);
+        students.put("Github: " +  mrCool123.getName(), mrCool123);
+
+    }
+
+    public static void userPrompt(HashMap<String, Student> students) {
+        System.out.println("Welcome");
+        System.out.println("Here is a list of student's Github Usernames: ");
     }
 }
