@@ -5,37 +5,46 @@ import java.util.HashMap;
 public class GradesApplication {
 
     public static void main(String[] args) {
+        //Key is a Sting and will represent the github usernames
+        // Value is the Student object
         HashMap<String, Student> students = new HashMap<>();
 
-        Student trex = new Student("John");
-        trex.addGrade(100);
-        trex.addGrade(83);
-        trex.addGrade(90);
+        Student john = new Student("tyrannosaurusRex");
+        john.addGrade(100);
+        john.addGrade(83);
+        john.addGrade(90);
 
-        Student lukeSkywalker = new Student ("luke");
-        lukeSkywalker.addGrade(40);
-        lukeSkywalker.addGrade(50);
-        lukeSkywalker.addGrade(4);
+        Student luke = new Student ("lukeSkywalker");
+        luke.addGrade(40);
+        luke.addGrade(50);
+        luke.addGrade(4);
 
-        Student barbie = new Student("maria");
-        barbie.addGrade(90);
-        barbie.addGrade(87);
-        barbie.addGrade(79);
+        Student maria = new Student("cinderella");
+        maria.addGrade(90);
+        maria.addGrade(87);
+        maria.addGrade(79);
 
-        Student mrCool123 = new Student("kyle");
-        mrCool123.addGrade(9);
-        mrCool123.addGrade(43);
-        mrCool123.addGrade(3);
+        Student kyle = new Student("mrCool247");
+        kyle.addGrade(9);
+        kyle.addGrade(43);
+        kyle.addGrade(3);
 
-        students.put("Github: " + trex.getName(), trex);
-        students.put("Github: " + lukeSkywalker.getName(), lukeSkywalker);
-        students.put("Github: " + barbie.getName(), barbie);
-        students.put("Github: " +  mrCool123.getName(), mrCool123);
+        students.put("github " + john.getName(), john);
+        students.put("github " + luke.getName(), luke);
+        students.put("github " + maria.getName(), maria);
+        students.put("github " +  kyle.getName(), kyle);
 
+        userResponse(students);
     }
 
-    public static void userPrompt(HashMap<String, Student> students) {
-        System.out.println("Welcome");
-        System.out.println("Here is a list of student's Github Usernames: ");
+    public static void userResponse(HashMap<String, Student> students) {
+        System.out.println("Welcome!");
+        System.out.println("Here are the GitHub usernames of out students");
+
+        for(String username : students.keySet()) {
+            System.out.print("| ");
+            System.out.printf("%s", username);
+            System.out.print(" | ");
+        }
     }
 }
