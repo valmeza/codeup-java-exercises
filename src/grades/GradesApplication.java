@@ -49,8 +49,18 @@ public class GradesApplication {
         System.out.println();
         System.out.println("What student would you like to see more information on?");
         String user = input.next();
-
         response(students, user);
+        do {
+            Scanner response = new Scanner(System.in);
+            System.out.println("Would you like to see another student?");
+            String yesNo = response.nextLine();
+            if(yesNo.equalsIgnoreCase("y")) {
+                welcome(students);
+            } else {
+                System.out.println("Goodbye, and have a wonderful day!");
+            }
+            return;
+        } while(true);
     }
 
     public static void response(HashMap<String, Student> students, String username) {
@@ -66,5 +76,4 @@ public class GradesApplication {
             System.out.printf("Current Grade Average: %,.1f%n", match.getGradeAverage());
         }
     }
-
 }
