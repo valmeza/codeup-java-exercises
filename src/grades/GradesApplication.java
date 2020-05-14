@@ -1,6 +1,6 @@
 package grades;
-
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -29,22 +29,42 @@ public class GradesApplication {
         kyle.addGrade(43);
         kyle.addGrade(3);
 
-        students.put("github " + john.getName(), john);
-        students.put("github " + luke.getName(), luke);
-        students.put("github " + maria.getName(), maria);
-        students.put("github " +  kyle.getName(), kyle);
-
-        userResponse(students);
+        students.put(john.getName(), john);
+        students.put(luke.getName(), luke);
+        students.put(maria.getName(), maria);
+        students.put(kyle.getName(), kyle);
+        welcome(students);
     }
 
-    public static void userResponse(HashMap<String, Student> students) {
+    public static void welcome(HashMap<String, Student> students) {
+        Scanner input = new Scanner(System.in);
         System.out.println("Welcome!");
-        System.out.println("Here are the GitHub usernames of out students");
+        System.out.println("Here are the GitHub usernames of our students");
 
         for(String username : students.keySet()) {
             System.out.print("| ");
             System.out.printf("%s", username);
             System.out.print(" | ");
         }
+        System.out.println();
+        System.out.println("What student would you like to see more information on?");
+        String user = input.next();
+
+        response(students, user);
     }
+
+    public static void response(HashMap<String, Student> students, String username) {
+
+
+        Student match;
+
+        if(!students.containsKey(username)) {
+            System.out.println("Sorry, no student was found with the Github username of " + username);
+        } else {
+            match = students.get(username);
+            System.out.println("Name: " + match.getName() + " Github: " + username);
+            System.out.printf("Current Grade Average: %,.1f%n", match.getGradeAverage());
+        }
+    }
+
 }
