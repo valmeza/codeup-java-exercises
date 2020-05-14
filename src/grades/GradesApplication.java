@@ -53,7 +53,7 @@ public class GradesApplication {
         response(students, user);
         do {
             Scanner response = new Scanner(System.in);
-            System.out.println("Would you like to see another student?");
+            System.out.println("Would you like to see another student? [y/no]");
             String yesNo = response.nextLine();
             if(yesNo.equalsIgnoreCase("y")) {
                 welcome(students);
@@ -66,13 +66,11 @@ public class GradesApplication {
 
     public static void response(HashMap<String, Student> students, String username) {
         Student match;
-        Student grades;
 
         if(!students.containsKey(username)) {
             System.out.println("Sorry, no student was found with the Github username of " + username);
         } else {
             match = students.get(username);
-//            grades = students.get(username);
             System.out.println("Name: " + match.getName() + " Github: " + username);
             System.out.printf("Current Grade Average: %,.1f%n", match.getGradeAverage());
         }
