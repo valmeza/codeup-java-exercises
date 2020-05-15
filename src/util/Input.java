@@ -7,7 +7,11 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Type Something: ");
+        return this.getString("Type Something: ");
+    }
+
+    public String getString(String prompt) {
+        System.out.println(prompt);
         return scanner.nextLine();
     }
 
@@ -17,10 +21,9 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter a number between " + min + " and " + max);
         int number;
         try {
-            number = Integer.valueOf(getString());
+            number = Integer.valueOf(getString("Enter a number between " + min + " and " + max));
             if (number < min || number > max) {
                 System.out.println("Out of range!");
                 return number;
@@ -35,8 +38,7 @@ public class Input {
     public int getInt() {
         int number;
         try {
-            System.out.println("Enter an Integer: ");
-           number = Integer.valueOf(getString());
+           number = Integer.valueOf(getString("Enter an Integer: "));
         } catch (NumberFormatException e) {
             System.out.println("Invalid number. Try Again!");
             return getInt();
@@ -45,10 +47,9 @@ public class Input {
     }
 
     public double getDouble(double min, double max) {
-        System.out.println("Enter a decimal between " + min + " and " + max);
         double number;
         try {
-            number = Double.valueOf(getString());
+            number = Double.valueOf(getString("Enter a decimal between " + min + " and " + max));
             if (number < min || number > max) {
                 System.out.println("Out of range!");
                 return number;
@@ -61,10 +62,9 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a decimal: ");
         double number;
         try {
-            number = Double.valueOf(getString());
+            number = Double.valueOf(getString("Enter a decimal: "));
         } catch (NumberFormatException e) {
             System.out.println("Invalid number. Try Again!");
             return getDouble();
@@ -73,16 +73,14 @@ public class Input {
     }
 
     public int getBinary() {
-        System.out.println("Enter a binary number: ");
-        String s = getString();
+        String s = getString("Enter a binary number: ");
         Integer binary = Integer.valueOf(s, 2);
 
         return binary;
     }
 
     public int getHexidecimal() {
-        System.out.println("Enter a Hexidecimal number: ");
-        String s = getString();
+        String s = getString("Enter a Hexidecimal number: ");
         Integer hex = Integer.valueOf(s, 16);
 
         return hex;
