@@ -23,10 +23,11 @@ public class Input {
             number = Integer.valueOf(getString());
             if (number < min || number > max) {
                 System.out.println("Out of range!");
-                return getInt(min, max);
+                return number;
             }
         } catch (NumberFormatException e) {
             System.out.println("1. Invalid format.");
+            return getInt(min, max);
         }
         return number;
     }
@@ -37,6 +38,7 @@ public class Input {
            number = Integer.valueOf(getString());
         } catch (NumberFormatException e) {
             System.out.println("2. Invalid format");
+            return getInt();
         }
         return number;
     }
@@ -48,10 +50,11 @@ public class Input {
             number = Double.parseDouble(scanner.nextLine());
             if (number < min || number > max) {
                 System.out.println("Out of range!");
-                return getDouble(min, max);
+                return number;
             }
         } catch(NumberFormatException e) {
             System.out.println("Invalid format");
+            return getDouble(min, max);
         }
         return number;
     }
@@ -63,6 +66,7 @@ public class Input {
             number = Double.valueOf(getString());
         } catch (NumberFormatException e) {
             System.out.println("Invalid format");
+            return getDouble();
         }
         return number;
     }
