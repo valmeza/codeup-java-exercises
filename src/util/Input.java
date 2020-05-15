@@ -26,7 +26,7 @@ public class Input {
                 return number;
             }
         } catch (NumberFormatException e) {
-            System.out.println("1. Invalid format.");
+            System.out.println("Invalid number. Try Again!");
             return getInt(min, max);
         }
         return number;
@@ -37,7 +37,7 @@ public class Input {
         try {
            number = Integer.valueOf(getString());
         } catch (NumberFormatException e) {
-            System.out.println("2. Invalid format");
+            System.out.println("Invalid number. Try Again!");
             return getInt();
         }
         return number;
@@ -53,7 +53,7 @@ public class Input {
                 return number;
             }
         } catch(NumberFormatException e) {
-            System.out.println("Invalid format");
+            System.out.println("Invalid number. Try Again!");
             return getDouble(min, max);
         }
         return number;
@@ -65,7 +65,7 @@ public class Input {
         try {
             number = Double.valueOf(getString());
         } catch (NumberFormatException e) {
-            System.out.println("Invalid format");
+            System.out.println("Invalid number. Try Again!");
             return getDouble();
         }
         return number;
