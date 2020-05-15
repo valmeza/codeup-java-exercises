@@ -17,7 +17,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.println("Enter a number between " + min + " " + max);
+        System.out.println("Enter a number between " + min + " and " + max);
         int number;
         try {
             number = Integer.valueOf(getString());
@@ -45,7 +45,7 @@ public class Input {
     }
 
     public double getDouble(double min, double max) {
-        System.out.println("Enter a decimal between " + min + " " + max);
+        System.out.println("Enter a decimal between " + min + " and " + max);
         double number;
         try {
             number = Double.valueOf(getString());
