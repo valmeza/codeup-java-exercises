@@ -7,7 +7,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-//        System.out.println("Enter Something: ");
+        System.out.println("Type Something: ");
         return scanner.nextLine();
     }
 
