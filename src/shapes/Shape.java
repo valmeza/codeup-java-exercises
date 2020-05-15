@@ -17,5 +17,6 @@ public abstract class Shape {
         return width;
     }
 
-    public abstract double shape();
+    public abstract void setLength();
+    public abstract void setWidth();
 }
