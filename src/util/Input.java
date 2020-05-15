@@ -70,4 +70,17 @@ public class Input {
         }
         return number;
     }
+
+    public int getBinary() {
+        System.out.println("Enter a binary number: ");
+        String s = getString();
+        Integer binary = Integer.valueOf(s, 2);
+
+        return binary;
+    }
+
+    public int getHexidecimal() {
+
+    }
+
 }
