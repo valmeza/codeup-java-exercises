@@ -35,6 +35,7 @@ public class Input {
     public int getInt() {
         int number = 0;
         try {
+            System.out.println("Enter an Integer: ");
            number = Integer.valueOf(getString());
         } catch (NumberFormatException e) {
             System.out.println("Invalid number. Try Again!");
@@ -47,7 +48,7 @@ public class Input {
         System.out.println("Enter a decimal between " + min + " " + max);
         double number = 0;
         try {
-            number = Double.parseDouble(scanner.nextLine());
+            number = Double.valueOf(getString());
             if (number < min || number > max) {
                 System.out.println("Out of range!");
                 return number;
