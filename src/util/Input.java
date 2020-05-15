@@ -80,7 +80,11 @@ public class Input {
     }
 
     public int getHexidecimal() {
+        System.out.println("Enter a Hexidecimal number: ");
+        String s = getString();
+        Integer hex = Integer.valueOf(s, 16);
 
+        return hex;
     }
 
 }

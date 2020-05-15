@@ -10,5 +10,6 @@ public class InputTest {
 //        System.out.println("Decimal " + response.getDouble(1.0, 10.00));
 //        System.out.println("Dec: " + response.getDouble());
         System.out.println("Binary: " + response.getBinary());
+        System.out.println("Binary: " + response.getHexidecimal());
     }
 }
