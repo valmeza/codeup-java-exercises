@@ -7,7 +7,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Enter Something: ");
+//        System.out.println("Enter Something: ");
         return scanner.nextLine();
     }
 
@@ -18,24 +18,42 @@ public class Input {
 
     public int getInt(int min, int max) {
         System.out.println("Enter a number between " + min + " " + max);
-        int number = Integer.parseInt(scanner.nextLine());
-        if (number < min || number > max) {
-            System.out.println("Out of range!");
+        int number = 0;
+        try {
+            number = Integer.valueOf(getString());
+            if (number < min || number > max) {
+                System.out.println("Out of range!");
+                return number;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number. Try Again!");
             return getInt(min, max);
         }
         return number;
     }
 
     public int getInt() {
-        System.out.println("Enter a number: ");
-        return Integer.parseInt(scanner.nextLine());
+        int number = 0;
+        try {
+           number = Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number. Try Again!");
+            return getInt();
+        }
+        return number;
     }
 
     public double getDouble(double min, double max) {
         System.out.println("Enter a decimal between " + min + " " + max);
-        double number = Double.parseDouble(scanner.nextLine());
-        if (number < min || number > max) {
-            System.out.println("Out of range!");
+        double number = 0;
+        try {
+            number = Double.parseDouble(scanner.nextLine());
+            if (number < min || number > max) {
+                System.out.println("Out of range!");
+                return number;
+            }
+        } catch(NumberFormatException e) {
+            System.out.println("Invalid number. Try Again!");
             return getDouble(min, max);
         }
         return number;
@@ -43,6 +61,13 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Enter a decimal: ");
-        return Double.parseDouble(scanner.nextLine());
+        double number  = 0;
+        try {
+            number = Double.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number. Try Again!");
+            return getDouble();
+        }
+        return number;
     }
 }
