@@ -6,7 +6,6 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
 //        getInteger(0, 0);
 //        getInteger(input);
-//        highLow(input);
         factorialTable(input);
         dice(input);
 //        System.out.println("Addition: " + addition(1, 1));
